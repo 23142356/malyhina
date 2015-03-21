@@ -1,7 +1,7 @@
 setwd("E:/")
 mydata<-read.table(file = "tunisia.txt", header = TRUE)
 attach(mydata)
-plot(Year, xlab="Год",terrorism, ylab="Терроризм", main=("Частота упоминаний характеристики для Туниса"), pch=15, col="red", type="b", xlim=c(2000,2014),ylim=c(0,370))
+plot(Year, xlab="Год",terrorism, ylab="Частота упоминаний", main=("Частота упоминаний характеристики для Туниса"), pch=15, col="red", type="b", xlim=c(2000,2014),ylim=c(0,3700))
 lines (Year,terrorist, xlim=c(2000,2014),pch=16,col="grey",type="b")
 lines (Year,occupation,xlim=c(2000,2014),pch=17,col="blue",type="b")
 lines (Year,narcotic,xlim=c(2000,2014),pch=18,col="black",type="b")
@@ -9,3 +9,4 @@ lines (Year,violation,xlim=c(2000,2014),pch=19,col="magenta",type="b")
 lines (Year,democracy,xlim=c(2000,2014),pch=20,col="orange",type="b")
 lines (Year,development,xlim=c(2000,2014),pch=21,col="purple",type="b")
 legend ("topleft", inset = 0.01, title = "Характеристика", c("терроризим","террорист","оккупация","наркотики", "насилие","демократия","развитие"), lty =c(1,1,1,1,1,1,1), pch=c(15, 16, 17, 18, 19, 20, 21),col=c("red","grey", "blue","black","magenta","orange","purple"))
+
